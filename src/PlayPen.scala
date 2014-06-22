@@ -24,8 +24,16 @@ object PlayPen {
     for (i <- startingNumber to 1 by -1) {
       println("countdown "+ i)
   }
-
+ }
+  def charToUnicode(stringToConvert: String) {
+  val chars = stringToConvert.toCharArray
+    for(char <- chars) {
+      println("char in array is " + char.toLong);
+    }
   }
+
+
   countdown(20)
+  charToUnicode("Hello")
 
 }

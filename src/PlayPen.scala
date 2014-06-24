@@ -25,13 +25,22 @@ object PlayPen {
       println("countdown "+ i)
   }
  }
-  def charToUnicode(stringToConvert: String) {
+    def charToUnicode(stringToConvert: String) {
+
   val chars = stringToConvert.toCharArray
     for(char <- chars) {
       println("char in array is " + char.toLong);
+
+
     }
+
   }
 
+  println("Hello" map (i => BigInt(i)) product)
+  def multiply(x:Long, y:Char) = {
+    x*y
+  }
+  println("Fold left example: " + "Hello".foldLeft(1L)(multiply))
 
   countdown(20)
   charToUnicode("Hello")

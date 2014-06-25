@@ -44,5 +44,11 @@ object PlayPen {
 
   countdown(20)
   charToUnicode("Hello")
-
+  val a = Array(2, 3, 5, 7, 9)
+  val result = (for (elem <- a) yield 2 * elem)
+  println("array " + result)
+  for (elem <- result) {
+    println("Yields: "+ elem)
+    }
+  println(result.mkString("Yields: ",", ",""))
 }

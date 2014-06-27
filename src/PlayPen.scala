@@ -51,4 +51,11 @@ object PlayPen {
     println("Yields: "+ elem)
     }
   println(result.mkString("Yields: ",", ",""))
+  val myArray=Array(4,7,2)
+  println(myArray.sorted.mkString(""","""))
+  val matrix= Array.ofDim[Int](3,4)
+  matrix(1)(1) = 42
+  println(matrix(1)(1))
+
+
 }

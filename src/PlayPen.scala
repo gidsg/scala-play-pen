@@ -57,5 +57,16 @@ object PlayPen {
   matrix(1)(1) = 42
   println(matrix(1)(1))
 
+  val myArrayOfRandomInts = new Array[Int](10);
+
+  for(i <- 0 until myArrayOfRandomInts.length){
+    myArrayOfRandomInts(i) = scala.util.Random.nextInt(10);
+  }
+
+  for(value <- myArrayOfRandomInts ) {
+    println(value);
+  }
+  println("random number "+(scala.util.Random.nextInt(10)))
+
 
 }

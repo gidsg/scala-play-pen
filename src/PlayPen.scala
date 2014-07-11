@@ -70,9 +70,11 @@ object PlayPen {
 //  }
 //  println("random number "+(scala.util.Random.nextInt(10)))
      val arraySequence = Array(1,2,3,4,5)
-  val grouped = arraySequence.iterator.grouped(2).toList
+  val grouped = arraySequence.iterator.grouped(2).toList.reverse.flatten.reverse
+    println(grouped)
     for(pair <- grouped) {
-      println(pair)
+
+      //println(pair.reverse)
     }
 
    }

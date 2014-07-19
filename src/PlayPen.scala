@@ -1,6 +1,9 @@
 import scala.collection.mutable.ArrayBuffer
 
 object PlayPen {
+
+ // def sorted
+
   def main(args: Array[String]) {
 //    println("Hello, world!")
 //    for(i <- 1 to 10 by 2){
@@ -12,8 +15,8 @@ object PlayPen {
 //        a = a + 1
 //    }
 //
-//    val res = for (a <- args) yield a.toUpperCase
-//    println("Arguments: " + res.toString)
+    val res = for (a <- args) yield a.toUpperCase
+    println("Arguments: " + res.toString)
 //  println(("Hello".take(4).dropRight(1)))
 //  def decorate(textToDecorate: String, left: String = "[", right: String = "]") =
 //    println(left + textToDecorate + right)
@@ -70,13 +73,29 @@ object PlayPen {
 //  }
 //  println("random number "+(scala.util.Random.nextInt(10)))
      val arraySequence = Array(1,2,3,4,5)
-  val grouped = arraySequence.iterator.grouped(2).toList.reverse.flatten.reverse
+  val grouped = arraySequence.grouped(2).toList.reverse.flatten.reverse
     println(grouped)
-    for(pair <- grouped) {
+//    for(pair <- grouped) {
+//
+//      //println(pair.reverse)
 
-      //println(pair.reverse)
+    val posNeg = Array(-2,5,-3,1,2)
+   // val sorted = posNeg.sorted
+    val posThenNeg = ArrayBuffer[Int]()
+    val posNumbers = for (item <- posNeg if item > 0 ) {
+   // println(item)
+    posThenNeg += item
+    }
+    val negNumbers = for (item <- posNeg if item < 0 ) {
+      posThenNeg += item
     }
 
-   }
+    println (posThenNeg.mkString("",",",""))
+
+
+
+   // println(sorted.mkString)
+    }
+
 
 }

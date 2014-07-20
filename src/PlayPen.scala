@@ -91,11 +91,21 @@ object PlayPen {
     }
 
     println (posThenNeg.mkString("",",",""))
-
-
+    val posNeg2 = Array(-2,5,5,-3,1,2)
+     val unique = posNeg2.distinct
+    println(unique.mkString)
 
    // println(sorted.mkString)
-    }
+    val timezones = java.util.TimeZone.getAvailableIDs()
+    //println(timezones.mkString("",",",""))
+    val americaTimezones = for(timezone <- timezones if timezone.startsWith("America/")) yield timezone.drop(8)
+  val sorted = americaTimezones.toList
+    println(sorted.sorted.mkString("",",",""))
+
+  }
+
+
+
 
 
 }

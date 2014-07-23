@@ -101,6 +101,12 @@ object PlayPen {
     val americaTimezones = for(timezone <- timezones if timezone.startsWith("America/")) yield timezone.drop(8)
   val sorted = americaTimezones.toList
     println(sorted.sorted.mkString("",",",""))
+    val scores = Map("Alice" -> 10, "Bob" -> 3, "Cindy" -> 8)
+    val bobsScore = scores.getOrElse("Bob", 0)
+    println(bobsScore)
+    for((k, v) <- scores){
+      println(s"$k, $v")
+    }
 
   }
 

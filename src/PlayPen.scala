@@ -101,12 +101,27 @@ object PlayPen {
     val americaTimezones = for(timezone <- timezones if timezone.startsWith("America/")) yield timezone.drop(8)
   val sorted = americaTimezones.toList
     println(sorted.sorted.mkString("",",",""))
-    val scores = Map("Alice" -> 10, "Bob" -> 3, "Cindy" -> 8)
+    val scores = scala.collection.mutable.Map("Alice" -> 10, "Bob" -> 3, "Cindy" -> 8)
     val bobsScore = scores.getOrElse("Bob", 0)
     println(bobsScore)
+    scores("Bob") = 9
+    scores("Fred") = 8
+    scores += ("Gids" -> 1, "bill" -> 5)
+    scores -= "Alice"
     for((k, v) <- scores){
       println(s"$k, $v")
     }
+
+    val tuple = ("Gids", 28, "Finchley")
+    (println(tuple._2))
+    val (name,age,location)=tuple
+    println(name)
+
+
+    val products =Map("ipod" -> 10, "ipad" -> 20)
+ val tenPercentOff= for((k,v) <- products) yield(k, v-v/10)
+    println(tenPercentOff.mkString)
+
 
   }
 

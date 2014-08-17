@@ -136,6 +136,16 @@ object PlayPen {
     val unique2 = wordsWithCount.distinct
    println(unique2.mkString)
 
+    val wordCount = words.map(word => words.count(_==word))
+    println(wordCount.mkString)
+    def minmax(values: Array[Int]) ={
+      val sorted =values.sorted
+      (sorted.head,sorted.last)
+    }
+   println(minmax(wordCount))
+    val tuple2 = (1,2)
+
+
     }
 
 

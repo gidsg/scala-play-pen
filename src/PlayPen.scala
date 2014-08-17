@@ -1,4 +1,7 @@
+import java.io.File
+import java.util.Scanner
 import scala.collection.mutable.ArrayBuffer
+import scala.io.Source
 
 object PlayPen {
 
@@ -122,11 +125,26 @@ object PlayPen {
  val tenPercentOff= for((k,v) <- products) yield(k, v-v/10)
     println(tenPercentOff.mkString)
 
+    val source = Source.fromFile (new File("/Users/gideongoldberg/Documents/hello.txt"))
 
-  }
+      val words = source.mkString.split("\\s+")
+    words.mkString
+    for (word <- words){
+      word
+    }
+    val wordsWithCount= words.map(word =>  (word, words.count(_ == word)))
+    val unique2 = wordsWithCount.distinct
+   println(unique2.mkString)
 
-
+    }
 
 
 
 }
+
+
+
+
+
+
+

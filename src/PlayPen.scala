@@ -154,7 +154,7 @@ object PlayPen {
     }
     println(lteqgt(intArray, 4))
 
-    class Person(name: String, age: Int){
+    class Person(val name: String,var age: Int){
       println(s"Just made a person called $name, $age years old")
       def talk{
        println(s"$name: said Hello!")
@@ -162,9 +162,20 @@ object PlayPen {
     }
     val me = new Person("Gids",28)
     me.talk
-
+    class BankAccount{
+      private var privateBalance = 0
+      def deposit(amount: Int){
+        privateBalance+=amount
+      }
+      def withdraw(amount: Int){
+        privateBalance-=amount
+      }
+      def balance = privateBalance
     }
-
+    val ba = new BankAccount
+    ba.deposit(5)
+    println(ba.balance)
+    }
 
 
 }

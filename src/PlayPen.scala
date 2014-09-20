@@ -144,7 +144,15 @@ object PlayPen {
     }
    println(minmax(wordCount))
     val tuple2 = (1,2)
+    val intArray = Array(1,2,3,4,5)
 
+    def lteqgt(values: Array[Int], v: Int)= {
+        val lt = (values.filter(_ < v)).length
+        val eq = (values.filter(_ == v)).length
+        val gt = (values.filter(_ > v)).length
+      (lt,eq,gt)
+    }
+    println(lteqgt(intArray, 4))
 
     }
 

@@ -154,6 +154,15 @@ object PlayPen {
     }
     println(lteqgt(intArray, 4))
 
+    class Person(name: String, age: Int){
+      println(s"Just made a person called $name, $age years old")
+      def talk{
+       println(s"$name: said Hello!")
+      }
+    }
+    val me = new Person("Gids",28)
+    me.talk
+
     }
 
 

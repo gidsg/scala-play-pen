@@ -175,6 +175,15 @@ object PlayPen {
     val ba = new BankAccount
     ba.deposit(5)
     println(ba.balance)
+    class Time(val hrs: Int, val min: Int) {
+      def before(other: Time): Boolean ={
+      val thisTime= (hrs.toString+min.toString).toInt
+      val beforeTime = (other.hrs.toString+other.min.toString).toInt
+      thisTime < beforeTime
+      }
+    }
+    val myTime = new Time(05,57)
+    println(myTime.before(new Time (06,59)))
     }
 
 

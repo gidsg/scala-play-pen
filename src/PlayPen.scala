@@ -154,13 +154,19 @@ object PlayPen {
     }
     println(lteqgt(intArray, 4))
 
-    class Person(val name: String,var age: Int){
+    class Person(val name: String, var age: Int ){
+      println(age)
+      if(age<0){
+      age=0 }
       println(s"Just made a person called $name, $age years old")
       def talk{
        println(s"$name: said Hello!")
       }
+
     }
-    val me = new Person("Gids",28)
+    val me = new Person("Gids",-2)
+
+
     me.talk
     class BankAccount{
       private var privateBalance = 0
@@ -177,8 +183,10 @@ object PlayPen {
     println(ba.balance)
     class Time(val hrs: Int, val min: Int) {
       def before(other: Time): Boolean ={
-      val thisTime= (hrs.toString+min.toString).toInt
-      val beforeTime = (other.hrs.toString+other.min.toString).toInt
+      val thisTime= (hrs*60)+min
+         println(s"This time $thisTime")
+      val beforeTime = (other.hrs*60)+other.min
+        println(s"before time $beforeTime")
       thisTime < beforeTime
       }
     }

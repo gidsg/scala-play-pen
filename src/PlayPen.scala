@@ -164,6 +164,16 @@ object PlayPen {
       }
 
     }
+
+    class FullNamePerson(name: String){
+   val names = name.split("\\s")
+   val firstName = names(0)
+   val lastName = names(1)
+    }
+
+    val meFN = new FullNamePerson("Gids Goldberg")
+    println(meFN.firstName)
+    println(meFN.lastName)
     val me = new Person("Gids",-2)
 
 

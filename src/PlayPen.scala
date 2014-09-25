@@ -2,6 +2,7 @@ import java.io.File
 import java.util.Scanner
 import scala.collection.mutable.ArrayBuffer
 import scala.io.Source
+import scala.Predef._
 
 object PlayPen {
 
@@ -202,6 +203,19 @@ object PlayPen {
     }
     val myTime = new Time(05,57)
     println(myTime.before(new Time (06,59)))
+
+
+    class Car(manufacturer: String, modelName: String){
+       var licencePlate = ""
+      def this(manufacturer: String, modelName: String, licencePlate: String){
+       this(manufacturer, modelName)
+        this.licencePlate=licencePlate
+
+      }
+    }
+  val myCar =  new Car("foo","bar","baz")
+    println(myCar.licencePlate)
+
     }
 
 

@@ -4,11 +4,11 @@ import scala.collection.mutable.ArrayBuffer
 import scala.io.Source
 import scala.Predef._
 
-object PlayPen {
+object PlayPen extends App {
 
  // def sorted
 
-  def main(args: Array[String]) {
+
 //    println("Hello, world!")
 //    for(i <- 1 to 10 by 2){
 //      println(s"loop $i")
@@ -207,16 +207,26 @@ object PlayPen {
 
     class Car(manufacturer: String, modelName: String){
        var licencePlate = ""
+      private var modelYear = -1
+      def getModelYear=modelYear
       def this(manufacturer: String, modelName: String, licencePlate: String){
        this(manufacturer, modelName)
         this.licencePlate=licencePlate
 
       }
-    }
-  val myCar =  new Car("foo","bar","baz")
-    println(myCar.licencePlate)
+      def this(manufacturer: String, modelName: String, licencePlate: String, modelYear: Int){
+        this(manufacturer, modelName)
+        this.licencePlate=licencePlate
+        this.modelYear=modelYear
 
+      }
     }
+  val myCar =  new Car("foo","bar","baz", 1986)
+    println(myCar.licencePlate)
+    println(myCar.getModelYear)
+    val myCar2 =  new Car("foo","bar","baz")
+    println(myCar2.getModelYear)
+
 
 
 }

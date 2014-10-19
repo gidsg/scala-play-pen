@@ -1,5 +1,6 @@
 import java.io.File
 import java.util.Scanner
+import scala.collection.immutable.Range
 import scala.collection.mutable.ArrayBuffer
 import scala.io.Source
 import scala.Predef._
@@ -226,7 +227,41 @@ object PlayPen extends App {
     println(myCar.getModelYear)
     val myCar2 =  new Car("foo","bar","baz")
     println(myCar2.getModelYear)
+    println("Hello with args"+args(0))
 
+  object Conversions{
+    def inchesToCentimeters(inches: Double)={
+      inches*2.54
+     }
+    def gallonsToLitres(gallons: Double)={
+      gallons*4.54
+     }
+    def milesToKilometers(miles: Double)={
+      miles*1.609
+     }
+
+  }
+
+    class UnitConversions {
+    }
+
+  object inchesToCentimeters extends UnitConversions {
+    def apply(inches: Double)={
+      inches*2.54
+    }
+
+
+
+    }
+    def gallonsToLitres(gallons: Double)={
+      gallons*4.54
+    }
+    def milesToKilometers(miles: Double)={
+      miles*1.609
+    }
+
+  println(inchesToCentimeters(5))
+  println()
 
 
 }

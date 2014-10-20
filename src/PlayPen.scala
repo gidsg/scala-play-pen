@@ -227,7 +227,10 @@ object PlayPen extends App {
     println(myCar.getModelYear)
     val myCar2 =  new Car("foo","bar","baz")
     println(myCar2.getModelYear)
-    println("Hello with args"+args(0))
+  val argsReverse=args.reverse
+  for(arg <- argsReverse) {
+  print(arg+" ")
+  }
 
   object Conversions{
     def inchesToCentimeters(inches: Double)={
@@ -243,6 +246,7 @@ object PlayPen extends App {
   }
 
     class UnitConversions {
+
     }
 
   object inchesToCentimeters extends UnitConversions {
@@ -264,7 +268,30 @@ object PlayPen extends App {
   println()
 
 
+  class Point{
+  }
+  object Point{
+    def apply(one: Int, two: Int){
+    println(s"$one $two")
+    }
+  }
+
+Point(3,4)
+  object PlayingCards extends Enumeration{
+  val clubs = Value("♣")
+  val diamonds = Value("♦")
+    val hearts = Value("♥")
+    val spades = Value("♠")
 }
+  println(PlayingCards.clubs.toString)
+//   def isRed(cardName: PlayingCards.Value)= {
+//   }
+//println(isRed(PlayingCards.diamonds))
+
+
+  }
+
+
 
 
 

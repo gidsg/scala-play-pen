@@ -283,10 +283,12 @@ Point(3,4)
     val hearts = Value("♥")
     val spades = Value("♠")
 }
-  println(PlayingCards.clubs.toString)
-//   def isRed(cardName: PlayingCards.Value)= {
-//   }
-//println(isRed(PlayingCards.diamonds))
+  println(PlayingCards.clubs)
+   def isRed(cardName: PlayingCards.Value)= {
+     cardName.toString=="♥"||cardName.toString=="♦"
+   }
+  println(isRed(PlayingCards.clubs))
+  println(isRed(PlayingCards.hearts))
 
 
   }
